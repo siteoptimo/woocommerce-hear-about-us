@@ -53,7 +53,7 @@ class WCHAU_Admin_Setting_Fields {
 				),
 				array(
 					'title'    => __( 'Possible answers', 'woocommerce-hear-about-us' ),
-					'desc'     => __( 'List all of the possible answers in this field. Separate them using a newline.', 'woocommerce-hear-about-us' ),
+					'desc'     => __( 'List all of the possible answers, one answer per line.', 'woocommerce-hear-about-us' ),
 					'id'       => 'wchau_options',
 					'type'     => 'textarea',
 					'default'  => '',
