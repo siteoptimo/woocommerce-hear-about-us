@@ -3,10 +3,11 @@
 class WCHAU_WPML_Compatibility {
 
 	public function __construct() {
-		add_filter( 'wchau_settings_fields', array( $this, 'wchau_translate_settings' ) );
+		add_filter( 'wchau_settings_fields', array( $this, 'translate_settings' ) );
+		add_filter( 'wchau_get_option', array($this, 'translate_option'));
 	}
 
-	public function wchau_translate_settings( $setting_fields ) {
+	public function translate_settings( $setting_fields ) {
 
 		$new_settings = array();
 
@@ -35,6 +36,16 @@ class WCHAU_WPML_Compatibility {
 
 		return $new_settings;
 
+	}
+
+	public function translate_option($option) {
+		$current_lang = ICL_LANGUAGE_CODE;
+
+		if($current_lang == $this->wpml_get_default_lang()) {
+			return $option;
+		}
+
+		return $option . "_" . $current_lang;
 	}
 
 	public static function wpml_enabled() {

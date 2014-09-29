@@ -210,6 +210,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * Initializes all of the frontend classes.
 			 */
 			public function frontend_init() {
+				new WCHAU_Custom_Field();
 			}
 
 			/**
