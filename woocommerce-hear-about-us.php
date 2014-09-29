@@ -2,15 +2,14 @@
 /*
 Plugin Name: WooCommerce Hear About Us
 Version: 1.0
-Plugin URI: http://www.siteoptimo.com/#utm_source=wpadmin&utm_medium=plugin&utm_campaign=wcfreegiftsplugin
-Description: Give your customers free gifts with this plugin for WooCommerce.
+Plugin URI: http://www.siteoptimo.com/#utm_source=wpadmin&utm_medium=plugin&utm_campaign=wch
+Description: Ask where your new customers come from at checkout.
 Author: SiteOptimo
 Author URI: http://www.siteoptimo.com/
 Text Domain: woocommerce-hear-about-us
 Domain Path: /i18n/languages/
 License: GPL v3
 
-WordPress SEO Plugin
 Copyright (C) 2014, SiteOptimo - team@siteoptimo.com
 
 This program is free software: you can redistribute it and/or modify
@@ -22,7 +21,7 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
-gi
+
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
