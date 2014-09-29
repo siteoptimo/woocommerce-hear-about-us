@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Hear About Us v1.0.0\n"
 "Report-Msgid-Bugs-To: Pieter Carette <pieter@siteoptimo.com>\n"
-"POT-Creation-Date: 2014-09-29 12:23+0100\n"
+"POT-Creation-Date: 2014-09-29 12:37+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Pieter Carette <pieter@siteoptimo.com>\n"
 "Language-Team: SiteOptimo <team@siteoptimo.com>\n"
@@ -28,29 +28,42 @@ msgid "Settings"
 msgstr "Instellingen"
 
 #: includes/admin/wchau-admin-setting-fields.php:27
+#: includes/wchau-custom-field.php:61
 msgid "Where did you hear about us"
 msgstr "Waar heeft u over ons gehoord"
 
-#: includes/admin/wchau-admin-setting-fields.php:34
+#: includes/admin/wchau-admin-setting-fields.php:35
 msgid "Make it required"
 msgstr "Maak het verplicht"
 
-#: includes/admin/wchau-admin-setting-fields.php:47
+#: includes/admin/wchau-admin-setting-fields.php:45
 msgid "Label"
 msgstr "Label"
 
-#: includes/admin/wchau-admin-setting-fields.php:48
+#: includes/admin/wchau-admin-setting-fields.php:46
 msgid "Customize the \"where did you hear about us\" label."
 msgstr "Bewerk het \"Waar heeft u over ons gehoord\" label."
 
-#: includes/admin/wchau-admin-setting-fields.php:51
+#: includes/admin/wchau-admin-setting-fields.php:49
 msgid "Where did you hear about us?"
 msgstr "Waar heeft us over ons gehoord?"
 
-#: includes/admin/wchau-admin-setting-fields.php:55
+#: includes/admin/wchau-admin-setting-fields.php:53
 msgid "Possible answers"
 msgstr "Mogelijke antwoorden"
 
-#: includes/admin/wchau-admin-setting-fields.php:56
+#: includes/admin/wchau-admin-setting-fields.php:54
 msgid "List all of the possible answers, one answer per line."
 msgstr "Noteer alle mogelijke antwoorden, 1 antwoord per regel."
+
+#: includes/wchau-custom-field.php:32
+msgid "-- Choose an option --"
+msgstr "-- Kies een optie --"
+
+#: includes/wchau-custom-field.php:44
+msgid "Please enter where you found us."
+msgstr "Geef in waar je ons gevonden hebt."
+
+#: includes/wchau-custom-field.php:64
+msgid "Source"
+msgstr "Bron"
