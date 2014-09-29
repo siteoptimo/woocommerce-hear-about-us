@@ -202,7 +202,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * Enables the needed frontend hooks.
 			 */
 			private function frontend_hooks() {
-
 				add_action( 'init', array( $this, 'frontend_init' ) );
 			}
 
@@ -210,13 +209,14 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * Initializes all of the frontend classes.
 			 */
 			public function frontend_init() {
-				new WCHAU_Custom_Field();
 			}
 
 			/**
 			 * The site-wide hooks.
 			 */
 			private function hooks() {
+				new WCHAU_Custom_Field();
+
 				add_action( 'init', array( $this, 'sitewide_init' ) );
 			}
 

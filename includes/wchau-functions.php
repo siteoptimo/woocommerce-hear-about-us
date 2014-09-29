@@ -16,5 +16,11 @@ function wchau_get_plugin_path() {
 }
 
 function wchau_get_option( $name, $default = "" ) {
-	return get_option( apply_filters( 'wchau_get_option', $name ), $default );
+	$filtered = get_option( apply_filters( 'wchau_get_option', $name ), $default );
+
+	if(empty($filtered)) {
+		return get_option($name, $default);
+	}
+
+	return $filtered;
 }
