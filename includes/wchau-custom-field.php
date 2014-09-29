@@ -6,10 +6,7 @@ class WCHAU_Custom_Field {
 		add_action( 'woocommerce_after_order_notes', array( $this, 'display_field' ) );
 		add_action( 'woocommerce_checkout_process', array( $this, 'process_checkout_fields' ) );
 		add_action( 'woocommerce_checkout_update_user_meta', array( $this, 'save_custom_checkout' ) );
-		//add_action( 'show_user_profile', array($this, 'show_source') );
 		add_filter( 'woocommerce_customer_meta_fields', array( $this, 'user_profile' ) );
-
-
 	}
 
 	function display_field( $checkout ) {
@@ -61,7 +58,7 @@ class WCHAU_Custom_Field {
 			'title'  => __( 'Where did you hear about us', 'woocommerce-hear-about-us' ),
 			'fields' => array(
 				'_wchau_source' => array(
-					'label'       => __( 'Source', 'woocommerce' ),
+					'label'       => __( 'Source', 'woocommerce-hear-about-us' ),
 					'description' => ''
 				),
 			)
