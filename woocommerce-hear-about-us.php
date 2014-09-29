@@ -195,7 +195,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * Initializes all of the admin classes.
 			 */
 			public function admin_init() {
-				new WCHAU_Admin_Setup();
 				new WCHAU_Admin_Add_Settings_Link();
 				new WCHAU_Admin_Setting_Fields();
 			}
@@ -225,10 +224,13 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * Initializes all of the sitewide classes.
 			 */
 			public function sitewide_init() {
+				if ( WCHAU_WPML_Compatibility::wpml_enabled() ) {
+					new WCHAU_WPML_Compatibility();
+				}
 			}
 		}
 
-		// Our WooCommmerce_Free Gifts instance.
+		// Our WooCommerce_HearAboutUs instance.
 		$WCHAU = WooCommerce_HearAboutUs::instance();
 	}
 

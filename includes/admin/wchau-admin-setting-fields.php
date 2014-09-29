@@ -17,8 +17,46 @@ class WCHAU_Admin_Setting_Fields {
 	 * Construct the class.
 	 */
 	public function __construct() {
-		add_action( 'woocommerce_settings_woocommerce_hear_about_us_settings', array( $this, 'settings_tab' ) );
-		add_action( 'woocommerce_update_options_woocommerce_hear_about_us_settings', array( $this, 'update_settings' ) );
+
+		add_filter( 'woocommerce_account_settings', array( $this, 'add_settings' ) );
+	}
+
+	public function add_settings( $settings ) {
+
+		$title = array(
+			'title' => __( 'Where did you hear about us', 'woocommerce-hear-about-us' ),
+			'type'  => 'title',
+			'desc'  => 'Manage the "where did you hear about us" options.',
+			'id'    => 'wchau_title'
+		);
+		array_push( $settings, $title );
+
+		$fields = apply_filters( 'wchau_settings_fields', array(
+				array(
+					'title'    => __( 'Label', 'woocommerce-hear-about-us' ),
+					'desc'     => __( 'Customize the "where did you hear about us" label.', 'woocommerce-hear-about-us' ),
+					'id'       => 'wchau_label',
+					'type'     => 'text',
+					'default'  => __('Where did you hear about us?', 'woocommerce-hear-about-us'),
+					'desc_tip' => true,
+				),
+				array(
+					'title'    => __( 'Possible answers', 'woocommerce-hear-about-us' ),
+					'desc'     => __( 'List all of the possible answers in this field. Separate them using a newline.', 'woocommerce-hear-about-us' ),
+					'id'       => 'wchau_options',
+					'type'     => 'textarea',
+					'default'  => '',
+					'desc_tip' => true,
+				)
+			)
+		);
+		$settings = array_merge( $settings, $fields );
+
+		$sectionend = array( 'type' => 'sectionend', 'id' => 'wchau_sectionend' );
+
+		array_push( $settings, $sectionend );
+
+		return $settings;
 	}
 
 	/**
@@ -72,7 +110,7 @@ class WCHAU_Admin_Setting_Fields {
 			'default'       => 'yes'
 		);
 
-		$settings['functionality']     = array(
+		$settings['functionality']            = array(
 			'title'         => 'Functionality',
 			'type'          => 'checkbox',
 			'checkboxgroup' => 'start',
@@ -80,7 +118,7 @@ class WCHAU_Admin_Setting_Fields {
 			'id'            => 'wchau_enable_free_gifts',
 			'default'       => 'yes'
 		);
-		$settings['disable_on_coupon'] = array(
+		$settings['disable_on_coupon']        = array(
 			'desc'          => __( 'Disable gifts when a coupon is used', 'woocommerce-hear-about-us' ),
 			'type'          => 'checkbox',
 			'checkboxgroup' => '',
