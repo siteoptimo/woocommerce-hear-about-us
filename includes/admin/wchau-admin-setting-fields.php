@@ -29,9 +29,20 @@ class WCHAU_Admin_Setting_Fields {
 			'desc'  => 'Manage the "where did you hear about us" options.',
 			'id'    => 'wchau_title'
 		);
+
+		$required = array(
+			'title'    => __( 'Make it required', 'woocommerce-hear-about-us' ),
+			'id'       => 'wchau_required',
+			'type'     => 'checkbox',
+			'default'  => 'yes',
+		);
+
 		array_push( $settings, $title );
+		array_push( $settings, $required );
+
 
 		$fields = apply_filters( 'wchau_settings_fields', array(
+
 				array(
 					'title'    => __( 'Label', 'woocommerce-hear-about-us' ),
 					'desc'     => __( 'Customize the "where did you hear about us" label.', 'woocommerce-hear-about-us' ),

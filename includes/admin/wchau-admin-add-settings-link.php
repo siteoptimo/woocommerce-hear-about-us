@@ -31,7 +31,7 @@ class WCHAU_Admin_Add_Settings_Link {
 	 * @return mixed
 	 */
 	public function wchau_settings_link( $links ) {
-		$settings_link = '<a href="admin.php?page=wc-settings&tab=woocommerce_hear_about_us_settings">' . __( 'Settings', 'woocommerce-hear-about-us' ) . '</a>';
+		$settings_link = '<a href="admin.php?page=wc-settings&tab=account">' . __( 'Settings', 'woocommerce-hear-about-us' ) . '</a>';
 		array_unshift( $links, $settings_link );
 
 		return $links;
