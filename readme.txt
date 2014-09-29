@@ -22,7 +22,7 @@ Current features:
 
 
 = WPML compatible =
-This plugin is WPML compatible. Multilingual shops can now auto send status notifications in the language of the customer.
+This plugin is WPML compatible. Multilingual shops can now ask where they came from in the language of the customer.
 
 = About the authors & support =
 This plugin is written by the brave and handsome coders of [SiteOptimo](http://www.siteoptimo.com/?utm_source=hear-about-plugin&utm_medium=wordpress&utm_campaign=wch).
