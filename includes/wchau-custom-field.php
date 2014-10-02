@@ -36,7 +36,10 @@ class WCHAU_Custom_Field {
 	}
 
 	public function process_checkout_fields() {
-		// Check if set, if its not set add an error.
+		if ( ! $this->is_field_required() ) {
+			return;
+		}
+
 		if ( ! isset( $_POST['wchau_source'] ) || empty( $_POST['wchau_source'] ) || $_POST['wchau_source'] == 'empty' ) {
 			wc_add_notice( __( 'Please enter where you found us.', 'woocommerce-hear-about-us' ), 'error' );
 		}
