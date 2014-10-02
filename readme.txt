@@ -38,7 +38,7 @@ Issues can be reported in our [GitHub Repository](https://github.com/siteoptimo/
 1. Done!
 
 == Frequently Asked Questions ==
-
+There are no frequently asked questions. :)
 
 == Screenshots ==
 1. Define your settings in the WooCommerce Account Settings.
