@@ -1,5 +1,5 @@
 === WooCommerce Hear About Us ===
-Contributors: siteoptimo
+Contributors: siteoptimo, vdwijngaert
 Donate link: http://www.siteoptimo.com/
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
