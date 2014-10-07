@@ -26,7 +26,7 @@ class WCHAU_Admin_Setting_Fields {
 		$title = array(
 			'title' => __( 'Where did you hear about us', 'woocommerce-hear-about-us' ),
 			'type'  => 'title',
-			'desc'  => 'Manage the "where did you hear about us" options.',
+			'desc'  => __( 'Manage the "where did you hear about us" options.', 'woocommerce-hear-about-us' ),
 			'id'    => 'wchau_title'
 		);
 		array_push( $settings, $title );

@@ -4,16 +4,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Hear About Us v1.0.0\n"
-"Report-Msgid-Bugs-To: Pieter Carette <pieter@siteoptimo.com>\n"
-"POT-Creation-Date: 2014-09-29 12:37+0100\n"
+"Report-Msgid-Bugs-To: https://github.com/siteoptimo/woocommerce-hear-about-us/issues\n"
+"POT-Creation-Date: 2014-10-05 10:50+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Pieter Carette <pieter@siteoptimo.com>\n"
+"Last-Translator: Koen Van den Wijngaert <koen@siteoptimo.com>\n"
 "Language-Team: SiteOptimo <team@siteoptimo.com>\n"
-"Language: nl_NL\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_html_e;esc_html__;esc_attr_e;esc_attr__;"
@@ -32,9 +32,13 @@ msgstr "Instellingen"
 msgid "Where did you hear about us"
 msgstr "Waar heeft u over ons gehoord"
 
+#: includes/admin/wchau-admin-setting-fields.php:29
+msgid "Manage the \"where did you hear about us\" options."
+msgstr "Beheer de \"Waar heeft u over ons gehoord\" instellingen."
+
 #: includes/admin/wchau-admin-setting-fields.php:35
 msgid "Make it required"
-msgstr "Maak het verplicht"
+msgstr "Verplicht veld?"
 
 #: includes/admin/wchau-admin-setting-fields.php:45
 msgid "Label"
@@ -56,7 +60,7 @@ msgstr "Mogelijke antwoorden"
 msgid "List all of the possible answers, one answer per line."
 msgstr "Noteer alle mogelijke antwoorden, 1 antwoord per regel."
 
-#: includes/wchau-custom-field.php:32
+#: includes/wchau-custom-field.php:29
 msgid "-- Choose an option --"
 msgstr "-- Kies een optie --"
 

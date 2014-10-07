@@ -218,6 +218,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				new WCHAU_Custom_Field();
 
 				add_action( 'init', array( $this, 'sitewide_init' ) );
+				add_action( 'plugins_loaded', array( $this, 'load_translations' ) );
 			}
 
 			/**
@@ -228,10 +229,13 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 					new WCHAU_WPML_Compatibility();
 				}
 			}
+
+			public function load_translations() {
+				load_plugin_textdomain( 'woocommerce-hear-about-us', false, dirname($this->plugin_basename()) . '/i18n/languages/' );
+			}
 		}
 
 		// Our WooCommerce_HearAboutUs instance.
 		$WCHAU = WooCommerce_HearAboutUs::instance();
 	}
-
 }
