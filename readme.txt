@@ -6,7 +6,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 Tags: woocommerce, user, source, customer, acquisition, hear, about
 Requires at least: 3.6
 Tested up to: 4.0
-Stable tag: 1.0
+Stable tag: 1.0.1
 
 Ask where your new customers come from at checkout.
 
@@ -48,6 +48,9 @@ There are no frequently asked questions. :)
 3. Setting is saved with the customer data.
 
 == Changelog ==
+
+= 1.0.1 =
+* Added proper i18n handling for non-wpml users.
 
 = 1.0 =
 * First version of the plugin.
