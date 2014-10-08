@@ -1,0 +1,73 @@
+# WooCommerce Hear about us
+# Copyright (C) 2014 ...
+# This file is distrubuted under the GPL-2.0+
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Hear About Us v1.0.0\n"
+"Report-Msgid-Bugs-To: Pieter Carette <pieter@siteoptimo.com>\n"
+"POT-Creation-Date: 2014-10-06 19:30+0800\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Coolwp <coolwp.com@gmail.com>\n"
+"Language-Team: suifengtec <suifengtec@suoling.net>\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html_e;esc_html__;esc_attr_e;esc_attr__;"
+"_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;"
+"__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ../../\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/admin/wchau-admin-add-settings-link.php:34
+msgid "Settings"
+msgstr "设置"
+
+#: includes/admin/wchau-admin-setting-fields.php:27
+#: includes/wchau-custom-field.php:61
+msgid "Where did you hear about us"
+msgstr "您是在哪儿听说我们的?"
+
+#: includes/admin/wchau-admin-setting-fields.php:29
+msgid "Manage the \"where did you hear about us\" options."
+msgstr "设置 \"您是在哪儿听说我们的?\" 选项。"
+
+#: includes/admin/wchau-admin-setting-fields.php:35
+msgid "Make it required"
+msgstr "必选?"
+
+#: includes/admin/wchau-admin-setting-fields.php:45
+msgid "Label"
+msgstr "标签"
+
+#: includes/admin/wchau-admin-setting-fields.php:46
+msgid "Customize the \"where did you hear about us\" label."
+msgstr "自定义 \"您是在哪儿听说我们的?\" 标签。"
+
+#: includes/admin/wchau-admin-setting-fields.php:49
+msgid "Where did you hear about us?"
+msgstr "您是在哪儿听说我们的?"
+
+#: includes/admin/wchau-admin-setting-fields.php:53
+msgid "Possible answers"
+msgstr "可能的答案"
+
+#: includes/admin/wchau-admin-setting-fields.php:54
+msgid "List all of the possible answers, one answer per line."
+msgstr "每个一行地列出全部可能的答案。"
+
+#: includes/wchau-custom-field.php:29
+msgid "-- Choose an option --"
+msgstr "-- 请选择 --"
+
+#: includes/wchau-custom-field.php:44
+msgid "Please enter where you found us."
+msgstr "请告诉我们：您是从哪里听说我们的。"
+
+#: includes/wchau-custom-field.php:64
+msgid "Source"
+msgstr "源"
