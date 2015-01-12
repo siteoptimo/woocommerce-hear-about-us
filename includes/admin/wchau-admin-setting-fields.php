@@ -48,9 +48,9 @@ class WCHAU_Admin_Setting_Fields {
 			'class'    => 'chosen_select',
 			'default'  => 'profiles_and_orders',
 			'options'  => array(
-				'profiles_and_orders'           => __( 'both user profiles and orders', 'woocommerce-hear-about-us' ),
-				'profiles_only' => __( 'user profiles only', 'woocommerce-hear-about-us' ),
-				'orders_only'   => __( 'orders only', 'woocommerce-hear-about-us' )
+				'profiles_and_orders' => __( 'both user profiles and orders', 'woocommerce-hear-about-us' ),
+				'profiles_only'       => __( 'user profiles only', 'woocommerce-hear-about-us' ),
+				'orders_only'         => __( 'orders only', 'woocommerce-hear-about-us' )
 			)
 		);
 
