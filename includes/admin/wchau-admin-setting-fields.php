@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Class WCHAU_Admin_Setting_Fields
  *
- * Handles the WooCommerce Plivo settings. This uses the WooCommerce Settings API.
+ * Handles the WooCommerce Where did you hear about us settings section in the Accounts settings.
  *
  * @package WooCommerce_HearAboutUs
  * @class WCHAU_Admin_Setting_Fields
@@ -39,6 +39,21 @@ class WCHAU_Admin_Setting_Fields {
 		);
 		array_push( $settings, $required );
 
+		$sourcefields = array(
+			'title'    => __( 'Source location', 'woocommerce-hear-about-us' ),
+			'desc'     => __( 'Where do you want to source to show?', 'woocommerce-hear-about-us' ),
+			'desc_tip' => true,
+			'id'       => 'wchau_sourcelocation',
+			'type'     => 'select',
+			'options'  => array(
+				__( 'both user profiles and orders', 'woocommerce-hear-about-us' ),
+				__( 'user profiles only', 'woocommerce-hear-about-us' ),
+				__( 'orders only', 'woocommerce-hear-about-us' )
+			)
+		);
+
+		array_push( $settings, $sourcefields );
+
 		$fields     = apply_filters( 'wchau_settings_fields', array(
 
 				array(
@@ -57,8 +72,7 @@ class WCHAU_Admin_Setting_Fields {
 					'default'  => implode( PHP_EOL, array( 'Google', 'Facebook', 'Twitter', 'A friend', 'Other' ) ),
 					'desc_tip' => true,
 				)
-			)
-		);
+			) );
 		$settings   = array_merge( $settings, $fields );
 		$sectionend = array( 'type' => 'sectionend', 'id' => 'wchau_sectionend' );
 
