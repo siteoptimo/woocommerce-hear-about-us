@@ -5,8 +5,16 @@ class WCHAU_Custom_Field {
 	public function __construct() {
 		add_action( 'woocommerce_after_order_notes', array( $this, 'display_field' ) );
 		add_action( 'woocommerce_checkout_process', array( $this, 'process_checkout_fields' ) );
-		add_action( 'woocommerce_checkout_update_user_meta', array( $this, 'save_custom_checkout' ) );
-		add_filter( 'woocommerce_customer_meta_fields', array( $this, 'user_profile' ) );
+
+		$source_location = get_option( 'wchau_sourcelocation', 'profiles_and_orders' );
+		if ( $source_location == 'profiles_and_orders' || $source_location == 'profiles_only' ) {
+			add_action( 'woocommerce_checkout_update_user_meta', array( $this, 'save_custom_checkout_for_users' ) );
+			add_filter( 'woocommerce_customer_meta_fields', array( $this, 'user_profile' ) );
+		}
+		if ( $source_location == 'profiles_and_orders' || $source_location == 'orders_only' ) {
+			add_action( 'woocommerce_checkout_update_order_meta', array( $this, 'save_source_to_order_meta' ) );
+		}
+
 	}
 
 	function display_field( $checkout ) {
@@ -45,7 +53,7 @@ class WCHAU_Custom_Field {
 		}
 	}
 
-	function save_custom_checkout( $user_id ) {
+	function save_custom_checkout_for_users( $user_id ) {
 		if ( ! empty( $_POST['wchau_source'] ) ) {
 
 			$options = $this->get_options();
@@ -53,6 +61,12 @@ class WCHAU_Custom_Field {
 			$source = $_POST['wchau_source'];
 
 			update_user_meta( $user_id, '_wchau_source', sanitize_text_field( isset( $options[ $source ] ) ? $options[ $source ] : '' ) );
+		}
+	}
+
+	function save_source_to_order_meta( $order_id ) {
+		if ( ! empty( $_POST['wchau_source'] ) ) {
+			update_post_meta( $order_id, 'source', sanitize_text_field( $_POST['wchau_source'] ) );
 		}
 	}
 
