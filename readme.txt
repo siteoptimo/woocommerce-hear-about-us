@@ -4,9 +4,9 @@ Donate link: http://www.siteoptimo.com/
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: woocommerce, user, source, customer, acquisition, hear, about
-Requires at least: 3.6
-Tested up to: 4.0
-Stable tag: 1.0.1
+Requires at least: 3.7
+Tested up to: 4.2
+Stable tag: 1.1.0
 
 Ask where your new customers come from at checkout.
 
@@ -48,6 +48,8 @@ There are no frequently asked questions. :)
 3. Setting is saved with the customer data.
 
 == Changelog ==
+= 1.1.0 =
+* Added requested feature to save the source on the order page. Added a choice in the admin (profiles and orders, orders, profiles).
 
 = 1.0.1 =
 * Added proper i18n handling for non-wpml users.
