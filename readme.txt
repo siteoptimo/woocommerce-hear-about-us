@@ -4,7 +4,7 @@ Donate link: http://www.siteoptimo.com/
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: woocommerce, user, source, customer, acquisition, hear, about
-Requires at least: 3.7
+Requires at least: WordPress 3.8 and WooCommerce 2.1
 Tested up to: 4.2
 Stable tag: 1.1.0
 
@@ -17,7 +17,7 @@ Current features:
 
 * Define your own question
 * Set referral locations
-* Saves the location at the customer profile
+* Saves the location at the customer profile or/and at the order
 * WPML compatible
 
 
@@ -28,7 +28,7 @@ This plugin is WPML compatible. Multilingual shops can now ask where they came f
 This plugin is written by the brave and handsome coders of [SiteOptimo](http://www.siteoptimo.com/?utm_source=hear-about-plugin&utm_medium=wordpress&utm_campaign=wch).
 We made it freely available for the WordPress and WooCommerce community. We might build more custom work in the future.
 
-Issues can be reported in our [GitHub Repository](https://github.com/siteoptimo/woocommerce-hear-about-us/issues).
+Issues can be reported in our [GitHub Repository](https://github.com/siteoptimo/woocommerce-hear-about-us/issues) or in the WordPress support forums.
 
 
 == Installation ==
