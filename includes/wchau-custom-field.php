@@ -22,7 +22,7 @@ class WCHAU_Custom_Field {
 			'type'     => 'select',
 			'class'    => array( 'wchau-source form-row-wide' ),
 			'label'    => wchau_get_option( 'wchau_label' ),
-			'options'  => $this->get_options(),
+			'options'  => self::get_options(),
 			'required' => $this->is_field_required(),
 		), $checkout->get_value( 'wchau_source' ) );
 
@@ -85,7 +85,7 @@ class WCHAU_Custom_Field {
 	}
 
 
-	private function get_options() {
+	public static function get_options() {
 		return self::prepare_options( wchau_get_option( 'wchau_options' ) );
 	}
 

@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WooCommerce Hear About Us
-Version: 1.1.0
+Version: 1.1.1
 Plugin URI: http://www.siteoptimo.com/#utm_source=wpadmin&utm_medium=plugin&utm_campaign=wch
 Description: Ask where your new customers come from at checkout.
 Author: SiteOptimo
@@ -52,7 +52,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 *
 			 * @var string
 			 */
-			public static $version = "1.1.0";
+			public static $version = "1.1.1";
 
 
 			/**
