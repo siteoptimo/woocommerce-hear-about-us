@@ -6,7 +6,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 Tags: woocommerce, user, source, customer, acquisition, hear, about
 Requires at least: WordPress 3.8 and WooCommerce 2.1
 Tested up to: 4.2
-Stable tag: 1.1.0
+Stable tag: 1.2
 
 Ask where your new customers come from at checkout.
 
@@ -16,8 +16,9 @@ This small plugin makes it possible to ask your customers where they came from a
 Current features:
 
 * Define your own question
-* Set referral locations
+* Set source locations
 * Saves the location at the customer profile or/and at the order
+* Mentions the source location on the order emails.
 * WPML compatible
 
 
@@ -38,7 +39,7 @@ Issues can be reported in our [GitHub Repository](https://github.com/siteoptimo/
 1. Done!
 
 == Frequently Asked Questions ==
-There are no frequently asked questions. :)
+There are no frequently asked questions. Head over to the support forums, we'll be glad to give you a quick answer.
 
 == Screenshots ==
 1. Define your settings in the WooCommerce Account Settings.
@@ -48,6 +49,12 @@ There are no frequently asked questions. :)
 3. Setting is saved with the customer data.
 
 == Changelog ==
+= 1.2 =
+* Added the source location to the order emails.
+
+= 1.1.1 =
+* Now displays the pretty value on the order summary instead of the slug version.
+
 = 1.1.0 =
 * Added requested feature to save the source on the order page. Added a choice in the admin (profiles and orders, orders, profiles).
 

@@ -15,6 +15,8 @@ class WCHAU_Custom_Field {
 			add_action( 'woocommerce_checkout_update_order_meta', array( $this, 'save_source_to_order_meta' ) );
 		}
 
+		add_filter( 'woocommerce_email_order_meta_keys', array( $this, 'add_field_to_email' ) );
+
 	}
 
 	function display_field( $checkout ) {
@@ -22,7 +24,7 @@ class WCHAU_Custom_Field {
 			'type'     => 'select',
 			'class'    => array( 'wchau-source form-row-wide' ),
 			'label'    => wchau_get_option( 'wchau_label' ),
-			'options'  => $this->get_options(),
+			'options'  => self::get_options(),
 			'required' => $this->is_field_required(),
 		), $checkout->get_value( 'wchau_source' ) );
 
@@ -84,8 +86,13 @@ class WCHAU_Custom_Field {
 		return $fields;
 	}
 
+	public function add_field_to_email( $keys ) {
+		$keys[ __( 'Source', 'woocommerce-hear-about-us' ) ] = 'source';
 
-	private function get_options() {
+		return $keys;
+	}
+
+	public static function get_options() {
 		return self::prepare_options( wchau_get_option( 'wchau_options' ) );
 	}
 
@@ -96,4 +103,7 @@ class WCHAU_Custom_Field {
 	private function is_field_required() {
 		return get_option( 'wchau_required', 'yes' ) == 'yes';
 	}
+
+
+
 }
