@@ -6,7 +6,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 Tags: woocommerce, user, source, customer, acquisition, hear, about
 Requires at least: WordPress 3.8 and WooCommerce 2.1
 Tested up to: 4.2
-Stable tag: 1.2
+Stable tag: 1.3
 
 Ask where your new customers come from at checkout.
 
@@ -49,6 +49,9 @@ There are no frequently asked questions. Head over to the support forums, we'll 
 3. Setting is saved with the customer data.
 
 == Changelog ==
+= 1.3 =
+* Added an option for displaying an "other" field.
+
 = 1.2 =
 * Added the source location to the order emails.
 
