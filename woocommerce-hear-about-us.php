@@ -237,6 +237,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		}
 
 		// Our WooCommerce_HearAboutUs instance.
+        global $WCHAU;
 		$WCHAU = WooCommerce_HearAboutUs::instance();
 	}
 }

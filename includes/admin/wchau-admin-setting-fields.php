@@ -56,6 +56,15 @@ class WCHAU_Admin_Setting_Fields {
 
 		array_push( $settings, $sourcefields );
 
+
+        $other = array(
+            'title'   => __( 'Allow "other" option?', 'woocommerce-hear-about-us' ),
+            'id'      => 'wchau_other',
+            'type'    => 'checkbox',
+            'default' => 'no',
+        );
+        array_push( $settings, $other );
+
 		$fields     = apply_filters( 'wchau_settings_fields', array(
 
 			array(
@@ -64,6 +73,15 @@ class WCHAU_Admin_Setting_Fields {
 				'id'       => 'wchau_label',
 				'type'     => 'text',
 				'default'  => __( 'Where did you hear about us?', 'woocommerce-hear-about-us' ),
+				'desc_tip' => true,
+			),
+
+			array(
+				'title'    => __( 'Label for "other"', 'woocommerce-hear-about-us' ),
+				'desc'     => __( 'Customize the "other" label.', 'woocommerce-hear-about-us' ),
+				'id'       => 'wchau_label_other',
+				'type'     => 'text',
+				'default'  => __( 'Other', 'woocommerce-hear-about-us' ),
 				'desc_tip' => true,
 			),
 			array(

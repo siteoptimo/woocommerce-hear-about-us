@@ -28,7 +28,18 @@ class WCHAU_Custom_Field {
 			'required' => $this->is_field_required(),
 		), $checkout->get_value( 'wchau_source' ) );
 
+        if(wchau_get_option('wchau_other', false)) {
+            $this->enqueue_option_js();
+            echo '<input type="text" name="wchau_source" value="" disabled style="display:none" />';
+        }
+
 	}
+
+    private function enqueue_option_js() {
+        global $WCHAU;
+
+        wp_enqueue_script('wchau_other', $WCHAU->plugin_url() . 'assets/js/other-field.js', array('jquery'), WooCommerce_HearAboutUs::$version, true);
+    }
 
 	public static function prepare_options( $options ) {
 
@@ -41,6 +52,10 @@ class WCHAU_Custom_Field {
 		foreach ( $options as $option ) {
 			$return[ self::slugify( $option ) ] = $option;
 		}
+
+        if(wchau_get_option('wchau_other', false)) {
+            $return['other'] = wchau_get_option('wchau_label_other');
+        }
 
 		return $return;
 	}
