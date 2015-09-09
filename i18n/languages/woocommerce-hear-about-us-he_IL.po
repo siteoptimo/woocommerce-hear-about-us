@@ -1,106 +1,114 @@
-# Copyright (C) 2015 WooCommerce Hear About Us
-# This file is distributed under the same license as the WooCommerce Hear About Us package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Hear About Us 1.4\n"
-"Report-Msgid-Bugs-To: https://github.com/siteoptimo/woocommerce-hear-about-us/issues\n"
-"POT-Creation-Date: 2015-09-09 12:22:59+00:00\n"
+"Project-Id-Version: WooCommerce Hear About Us\n"
+"POT-Creation-Date: 2015-07-27 23:20+0300\n"
+"PO-Revision-Date: 2015-07-29 19:54+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he_IL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-09-09 15:00+GMT\n"
-"Last-Translator: Koen Van den Wijngaert <koen@siteoptimo.com>\n"
-"Language-Team: SiteOptimo <team@siteoptimo.com>\n"
+"X-Generator: Poedit 1.8.3\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-WPHeader: woocommerce-hear-about-us.php\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: includes/admin/wchau-admin-add-settings-link.php:34
 msgid "Settings"
-msgstr ""
+msgstr "הגדרות"
 
 #: includes/admin/wchau-admin-display-on-order.php:23
 msgid "N/A"
-msgstr ""
+msgstr "לא זמין"
 
 #: includes/admin/wchau-admin-display-on-order.php:30
 #: includes/wchau-custom-field.php:95 includes/wchau-custom-field.php:105
 msgid "Source"
-msgstr ""
+msgstr "מקור"
 
 #: includes/admin/wchau-admin-setting-fields.php:27
 #: includes/wchau-custom-field.php:92
 msgid "Where did you hear about us"
-msgstr ""
+msgstr "היכן שמעת עלינו"
 
 #: includes/admin/wchau-admin-setting-fields.php:29
 msgid "Manage the \"where did you hear about us\" options."
-msgstr ""
+msgstr "נהל את האפשרויות ״היכן שמעת עלינו״."
 
 #: includes/admin/wchau-admin-setting-fields.php:35
 msgid "Make it required"
-msgstr ""
+msgstr "הפוך לנדרש"
 
 #: includes/admin/wchau-admin-setting-fields.php:43
 msgid "Source location"
-msgstr ""
+msgstr "מיקום המקור"
 
 #: includes/admin/wchau-admin-setting-fields.php:44
 msgid "Where do you want to source to show?"
-msgstr ""
+msgstr "היכן תרצה שהמקור יופיע?"
 
 #: includes/admin/wchau-admin-setting-fields.php:51
 msgid "both user profiles and orders"
-msgstr ""
+msgstr "פרופילי משתמש והזמנות יחד"
 
 #: includes/admin/wchau-admin-setting-fields.php:52
 msgid "user profiles only"
-msgstr ""
+msgstr "פרופילי משתמש בלבד"
 
 #: includes/admin/wchau-admin-setting-fields.php:53
 msgid "orders only"
-msgstr ""
+msgstr "הזמנות בלבד"
 
 #: includes/admin/wchau-admin-setting-fields.php:61
 msgid "Allow \"other\" option?"
-msgstr ""
+msgstr "אפשר אופציה של ״אחר״?"
 
 #: includes/admin/wchau-admin-setting-fields.php:71
 msgid "Label"
-msgstr ""
+msgstr "תווית"
 
 #: includes/admin/wchau-admin-setting-fields.php:72
 msgid "Customize the \"where did you hear about us\" label."
-msgstr ""
+msgstr "התאם אישית את התווית ״היכן שמעת עלינו״."
 
 #: includes/admin/wchau-admin-setting-fields.php:75
 msgid "Where did you hear about us?"
-msgstr ""
+msgstr "היכן שמעת עלינו?"
 
 #: includes/admin/wchau-admin-setting-fields.php:80
 msgid "Label for \"other\""
-msgstr ""
+msgstr "תווית עבור ״אחר״"
 
 #: includes/admin/wchau-admin-setting-fields.php:81
 msgid "Customize the \"other\" label."
-msgstr ""
+msgstr "התאם אישית את התווית ״אחר״"
 
 #: includes/admin/wchau-admin-setting-fields.php:84
 msgid "Other"
-msgstr ""
+msgstr "אחר"
 
 #: includes/admin/wchau-admin-setting-fields.php:88
 msgid "Possible answers"
-msgstr ""
+msgstr "תשובות אפשריות"
 
 #: includes/admin/wchau-admin-setting-fields.php:89
 msgid "List all of the possible answers, one answer per line."
-msgstr ""
+msgstr "רשימת תשובות אפשריות, תשובה אחת לכל שורה."
 
 #: includes/wchau-custom-field.php:50
 msgid "-- Choose an option --"
-msgstr ""
+msgstr "— בחר אפשרות —"
 
 #: includes/wchau-custom-field.php:69
 msgid "Please enter where you found us."
-msgstr ""
+msgstr "אנא הזן היכן מצאת אותנו."
 
 #. Plugin Name of the plugin/theme
 msgid "WooCommerce Hear About Us"
@@ -114,7 +122,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid "Ask where your new customers come from at checkout."
-msgstr ""
+msgstr "שאל מהיכן לקוחותיך החדשים הגיעו בשלב הקופה."
 
 #. Author of the plugin/theme
 msgid "SiteOptimo"
