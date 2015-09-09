@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WooCommerce Hear About Us
-Version: 1.3
+Version: 1.4
 Plugin URI: http://www.siteoptimo.com/#utm_source=wpadmin&utm_medium=plugin&utm_campaign=wch
 Description: Ask where your new customers come from at checkout.
 Author: SiteOptimo
@@ -33,13 +33,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Check if WooCommerce is active
  */
-if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) )
+     || array_key_exists( 'woocommerce/woocommerce.php', maybe_unserialize( get_site_option( 'active_sitewide_plugins', array() ) ) ) ) {
 	if ( ! class_exists( 'WooCommerce_HearAboutUs' ) ) {
 		/**
 		 * Main WooCommerce_HearAboutUs Class
 		 *
 		 * @class WooCommerce_HearAboutUs
-		 * @version 1.3
+		 * @version 1.4
 		 */
 		final class WooCommerce_HearAboutUs {
 			/**
@@ -52,7 +53,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 *
 			 * @var string
 			 */
-			public static $version = "1.3";
+			public static $version = "1.4";
 
 			/**
 			 * Constructor method
