@@ -6,7 +6,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 Tags: woocommerce, user, source, customer, acquisition, hear, about
 Requires at least: WordPress 3.8 and WooCommerce 2.1
 Tested up to: 4.4
-Stable tag: 1.4
+Stable tag: 1.4.1
 
 Ask where your new customers come from at checkout.
 
@@ -50,6 +50,9 @@ There are no frequently asked questions. Head over to the support forums, we'll 
 3. Setting is saved with the customer data.
 
 == Changelog ==
+= 1.4.1 =
+* Fixed a bug where "other" field was not displayed on the user profile.
+
 = 1.4 =
 * Plugin now works with WordPress multisite, thanks to [ionainteractive](https://wordpress.org/support/profile/ionainteractive).
 * Updated translations
