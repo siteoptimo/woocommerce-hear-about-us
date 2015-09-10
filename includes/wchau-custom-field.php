@@ -74,10 +74,11 @@ class WCHAU_Custom_Field {
 		if ( ! empty( $_POST['wchau_source'] ) ) {
 
 			$options = $this->get_options();
-
 			$source = $_POST['wchau_source'];
 
-			update_user_meta( $user_id, '_wchau_source', sanitize_text_field( isset( $options[ $source ] ) ? $options[ $source ] : '' ) );
+			$source = sanitize_text_field( isset( $options[ $source ] ) ? $options[ $source ] : $source );
+
+			update_user_meta( $user_id, '_wchau_source', $source );
 		}
 	}
 
