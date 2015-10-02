@@ -73,10 +73,9 @@ class WCHAU_Custom_Field {
 	function save_custom_checkout_for_users( $user_id ) {
 		if ( ! empty( $_POST['wchau_source'] ) ) {
 
-			$options = $this->get_options();
 			$source = $_POST['wchau_source'];
 
-			$source = sanitize_text_field( isset( $options[ $source ] ) ? $options[ $source ] : $source );
+			$source = sanitize_text_field( wchau_get_option_value( $source ) );
 
 			update_user_meta( $user_id, '_wchau_source', $source );
 		}
@@ -84,7 +83,7 @@ class WCHAU_Custom_Field {
 
 	function save_source_to_order_meta( $order_id ) {
 		if ( ! empty( $_POST['wchau_source'] ) ) {
-			update_post_meta( $order_id, 'source', sanitize_text_field( $_POST['wchau_source'] ) );
+			update_post_meta( $order_id, 'source', wchau_get_option_value( sanitize_text_field( $_POST['wchau_source'] ) ) );
 		}
 	}
 

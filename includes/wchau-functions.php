@@ -24,3 +24,17 @@ function wchau_get_option( $name, $default = "" ) {
 
 	return $filtered;
 }
+
+function wchau_get_option_value($option, $empty_value = null) {
+	$options = WCHAU_Custom_Field::get_options();
+	if ( empty( $option ) ) {
+		return !isset($empty_value) ? __( 'N/A', 'woocommerce-hear-about-us' ) : $empty_value;
+	}
+
+	// for compatibility reasons.
+	if(isset($options[$option])) {
+		return $options[$option];
+	}
+
+	return $option;
+}

@@ -17,18 +17,9 @@ class WCHAU_Admin_Display_On_Order {
 	}
 
 	function display_source_with_order_meta( $order ) {
-        $options = WCHAU_Custom_Field::get_options();
-		$order_source = get_post_meta( $order->id, 'source', true );
-		if ( $order_source == '' ) {
-			$order_source = __( 'N/A', 'woocommerce-hear-about-us' );
-		}
-
-        if(isset($options[$order_source])) {
-            $order_source = $options[$order_source];
-        }
+		$order_source = wchau_get_option_value(get_post_meta( $order->id, 'source', true ));
 
 		echo '<p><strong>' . __( 'Source', 'woocommerce-hear-about-us' ) . ':</strong> ' . $order_source . '</p>';
-
 	}
 
 }

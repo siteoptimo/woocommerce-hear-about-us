@@ -43,7 +43,7 @@ class WCHAU_Admin_Column {
 
 	public function userColumnValue( $value, $column_name, $user_id ) {
 		if ( 'source' === $column_name ) {
-			return get_user_meta( $user_id, '_wchau_source', true );
+			return wchau_get_option_value( get_user_meta( $user_id, '_wchau_source', true ), '' );
 		}
 
 		return $value;
@@ -63,7 +63,7 @@ class WCHAU_Admin_Column {
 
 	public function orderColumnValue( $column_name, $order_id ) {
 		if ( 'source' === $column_name ) {
-			echo get_post_meta( $order_id, 'source', true );
+			echo wchau_get_option_value( get_post_meta( $order_id, 'source', true ), '' );
 		}
 	}
 }
