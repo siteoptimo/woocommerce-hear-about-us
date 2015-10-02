@@ -197,6 +197,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				new WCHAU_Admin_Add_Settings_Link();
 				new WCHAU_Admin_Setting_Fields();
 				new WCHAU_Admin_Display_On_Order();
+				new WCHAU_Admin_Column();
 
 			}
 
