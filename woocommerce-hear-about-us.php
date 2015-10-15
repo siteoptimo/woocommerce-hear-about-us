@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WooCommerce Hear About Us
-Version: 1.4.2
+Version: 1.4.3
 Plugin URI: http://www.siteoptimo.com/#utm_source=wpadmin&utm_medium=plugin&utm_campaign=wch
 Description: Ask where your new customers come from at checkout.
 Author: SiteOptimo
@@ -10,7 +10,7 @@ Text Domain: woocommerce-hear-about-us
 Domain Path: /i18n/languages/
 License: GPL v3
 
-Copyright (C) 2014, SiteOptimo - team@siteoptimo.com
+Copyright (C) 2014,2015 SiteOptimo - team@siteoptimo.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -40,7 +40,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		 * Main WooCommerce_HearAboutUs Class
 		 *
 		 * @class WooCommerce_HearAboutUs
-		 * @version 1.4.2
+		 * @version 1.4.3
 		 */
 		final class WooCommerce_HearAboutUs {
 			/**
@@ -53,7 +53,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 *
 			 * @var string
 			 */
-			public static $version = "1.4.2";
+			public static $version = "1.4.3";
 
 			/**
 			 * Constructor method
@@ -212,14 +212,13 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * Initializes all of the frontend classes.
 			 */
 			public function frontend_init() {
+
 			}
 
 			/**
 			 * The site-wide hooks.
 			 */
 			private function hooks() {
-				new WCHAU_Custom_Field();
-
 				add_action( 'init', array( $this, 'sitewide_init' ) );
 				add_action( 'plugins_loaded', array( $this, 'load_translations' ) );
 			}
@@ -228,6 +227,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * Initializes all of the sitewide classes.
 			 */
 			public function sitewide_init() {
+				new WCHAU_Custom_Field();
 				if ( WCHAU_WPML_Compatibility::wpml_enabled() ) {
 					new WCHAU_WPML_Compatibility();
 				}
