@@ -6,7 +6,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 Tags: woocommerce, user, source, customer, acquisition, hear, about
 Requires at least: WordPress 3.8 and WooCommerce 2.1
 Tested up to: 4.4
-Stable tag: 1.4.2
+Stable tag: 1.4.3
 
 Ask where your new customers come from at checkout.
 
@@ -50,6 +50,9 @@ There are no frequently asked questions. Head over to the support forums, we'll 
 3. Setting is saved with the customer data.
 
 == Changelog ==
+= 1.4.3 (2015-10-15) =
+* Prevents asking the "Where did you hear about us?" question more than one time for the same user.
+
 = 1.4.2 =
 * Added custom sortable column to order listing.
 * Added custom sortable column to user listing. Thanks for your input, [goto10](https://profiles.wordpress.org/goto10/).
