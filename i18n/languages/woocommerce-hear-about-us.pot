@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Hear About Us 1.4.3\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: https://github.com/siteoptimo/woocommerce-hear-about-us/issues\n"
 "POT-Creation-Date: 2015-10-15 08:37-0300\n"
 "PO-Revision-Date: 2015-10-15 08:38-0300\n"
 "Last-Translator: Gabriel Reguly <wordpress@ppgr.com.br>\n"
