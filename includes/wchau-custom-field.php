@@ -3,14 +3,18 @@
 class WCHAU_Custom_Field {
 
 	public function __construct() {
-		add_action( 'woocommerce_after_order_notes', array( $this, 'display_field' ) );
-		add_action( 'woocommerce_checkout_process', array( $this, 'process_checkout_fields' ) );
+		
+		if ( ! $this->user_already_answered () ) {
+			add_action( 'woocommerce_after_order_notes', array( $this, 'display_field' ) );
+			add_action( 'woocommerce_checkout_process',  array( $this, 'process_checkout_fields' ) );			
+		}
 
 		$source_location = get_option( 'wchau_sourcelocation', 'profiles_and_orders' );
 		if ( $source_location == 'profiles_and_orders' || $source_location == 'profiles_only' ) {
 			add_action( 'woocommerce_checkout_update_user_meta', array( $this, 'save_custom_checkout_for_users' ) );
 			add_filter( 'woocommerce_customer_meta_fields', array( $this, 'user_profile' ) );
 		}
+
 		if ( $source_location == 'profiles_and_orders' || $source_location == 'orders_only' ) {
 			add_action( 'woocommerce_checkout_update_order_meta', array( $this, 'save_source_to_order_meta' ) );
 		}
@@ -20,6 +24,7 @@ class WCHAU_Custom_Field {
 	}
 
 	function display_field( $checkout ) {
+
 		woocommerce_form_field( 'wchau_source', array(
 			'type'     => 'select',
 			'class'    => array( 'wchau-source form-row-wide' ),
@@ -30,7 +35,7 @@ class WCHAU_Custom_Field {
 
         if(wchau_get_option('wchau_other', false)) {
             $this->enqueue_option_js();
-            echo '<input type="text" name="wchau_source" value="" disabled style="display:none" />';
+            echo '<input type="text" name="wchau_source" value="" disabled="disabled" style="display:none" />';
         }
 
 	}
@@ -119,6 +124,14 @@ class WCHAU_Custom_Field {
 		return get_option( 'wchau_required', 'yes' ) == 'yes';
 	}
 
+	private function user_already_answered() {
+ 
+		if ( is_user_logged_in() && get_user_meta( get_current_user_id(), '_wchau_source', true ) ) {
+			return true;
+		} else {
+			return false;
+		}
 
+	}
 
 }
