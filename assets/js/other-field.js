@@ -4,14 +4,15 @@
     if(!$sourceField.length) return;
 
     var $otherField = $("input[name='wchau_source']");
+    var $otherFieldContainer = $otherField.closest('.form-row');
 
     function checkOtherField() {
         if($sourceField.val() == "other") {
             $otherField.prop('disabled', false);
-            $otherField.show();
+            $otherFieldContainer.show();
         } else {
             $otherField.prop('disabled', true);
-            $otherField.hide();
+            $otherFieldContainer.hide();
         }
     }
 
