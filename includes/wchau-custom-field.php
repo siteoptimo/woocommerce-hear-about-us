@@ -48,7 +48,7 @@ class WCHAU_Custom_Field {
 			woocommerce_form_field( 'wchau_source',
 				array(
 					'type'              => 'text',
-					'label'             => __( 'Other', 'woocommerce-hear-about-us' ),
+					'label'             =>  wchau_get_option( 'wchau_label_other' ),
 					'required'          => $this->is_field_required(),
 				) );
 		}
