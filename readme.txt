@@ -6,7 +6,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 Tags: woocommerce, user, source, customer, acquisition, hear, about
 Requires at least: WordPress 3.8 and WooCommerce 2.1
 Tested up to: 4.4
-Stable tag: 1.5.0
+Stable tag: 1.5.1
 
 Ask where your new customers come from at checkout.
 
@@ -50,6 +50,9 @@ There are no frequently asked questions. Head over to the support forums, we'll 
 3. Setting is saved with the customer data.
 
 == Changelog ==
+= 1.5.1 (2016-03-04) =
+* Classes instantiated by WooCommerce_HearAboutUs are now publicly available.
+
 = 1.5.0 (2015-12-03) =
 * Other field now has an "other" label and appears the same as other WooCommerce fields.
 

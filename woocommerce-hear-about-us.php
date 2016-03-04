@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WooCommerce Hear About Us
-Version: 1.5.0
+Version: 1.5.1
 Plugin URI: http://www.siteoptimo.com/#utm_source=wpadmin&utm_medium=plugin&utm_campaign=wch
 Description: Ask where your new customers come from at checkout.
 Author: SiteOptimo
@@ -40,7 +40,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		 * Main WooCommerce_HearAboutUs Class
 		 *
 		 * @class WooCommerce_HearAboutUs
-		 * @version 1.5.0
+		 * @version 1.5.1
 		 */
 		final class WooCommerce_HearAboutUs {
 			/**
@@ -53,7 +53,32 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 *
 			 * @var string
 			 */
-			public static $version = "1.5.0";
+			public static $version = "1.5.1";
+
+			/**
+			 * @var WCHAU_Admin_Add_Settings_Link
+			 */
+			public $addSettingsLink;
+			/**
+			 * @var WCHAU_Admin_Setting_Fields
+			 */
+			public $settingFields;
+			/**
+			 * @var WCHAU_Admin_Display_On_Order
+			 */
+			public $displayOnOrder;
+			/**
+			 * @var WCHAU_Admin_Column
+			 */
+			public $column;
+			/**
+			 * @var WCHAU_Custom_Field
+			 */
+			public $customField;
+			/**
+			 * @var WPML_Compatibility
+			 */
+			public $wpmlCompatibility;
 
 			/**
 			 * Constructor method
@@ -194,10 +219,10 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * Initializes all of the admin classes.
 			 */
 			public function admin_init() {
-				new WCHAU_Admin_Add_Settings_Link();
-				new WCHAU_Admin_Setting_Fields();
-				new WCHAU_Admin_Display_On_Order();
-				new WCHAU_Admin_Column();
+				$this->addSettingsLink = new WCHAU_Admin_Add_Settings_Link();
+				$this->settingFields = new WCHAU_Admin_Setting_Fields();
+				$this->displayOnOrder = new WCHAU_Admin_Display_On_Order();
+				$this->column = new WCHAU_Admin_Column();
 
 			}
 
@@ -227,9 +252,9 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * Initializes all of the sitewide classes.
 			 */
 			public function sitewide_init() {
-				new WCHAU_Custom_Field();
+				$this->customField = new WCHAU_Custom_Field();
 				if ( WCHAU_WPML_Compatibility::wpml_enabled() ) {
-					new WCHAU_WPML_Compatibility();
+					$this->wpmlCompatibility = new WCHAU_WPML_Compatibility();
 				}
 			}
 
