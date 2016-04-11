@@ -5,7 +5,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: woocommerce, user, source, customer, acquisition, hear, about
 Requires at least: WordPress 3.8 and WooCommerce 2.1
-Tested up to: 4.4
+Tested up to: 4.5
 Stable tag: 1.5.1
 
 Ask where your new customers come from at checkout.
