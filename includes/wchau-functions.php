@@ -38,3 +38,7 @@ function wchau_get_option_value($option, $empty_value = null) {
 
 	return $option;
 }
+
+function wchau_other_field_enabled() {
+	return wchau_get_option( 'wchau_other', false ) === 'yes';
+}

@@ -42,7 +42,7 @@ class WCHAU_Custom_Field {
 			),
 			$checkout->get_value( 'wchau_source' ) );
 
-		if ( wchau_get_option( 'wchau_other', false ) ) {
+		if ( wchau_other_field_enabled() ) {
 			$this->enqueue_option_js();
 			// Generate HTML for Other field.
 			woocommerce_form_field( 'wchau_source',
@@ -78,7 +78,7 @@ class WCHAU_Custom_Field {
 			$return[ self::slugify( $option ) ] = $option;
 		}
 
-		if ( wchau_get_option( 'wchau_other', false ) ) {
+		if ( wchau_other_field_enabled() ) {
 			$return['other'] = wchau_get_option( 'wchau_label_other' );
 		}
 
