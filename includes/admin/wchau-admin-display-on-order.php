@@ -16,8 +16,8 @@ class WCHAU_Admin_Display_On_Order {
 
 	}
 
-	function display_source_with_order_meta( $order ) {
-		$order_source = wchau_get_option_value(get_post_meta( $order->id, 'source', true ));
+	function display_source_with_order_meta( WC_Order $order ) {
+		$order_source = wchau_get_option_value(get_post_meta( $order->get_id(), 'source', true ));
 
 		echo '<p><strong>' . __( 'Source', 'woocommerce-hear-about-us' ) . ':</strong> ' . $order_source . '</p>';
 	}
